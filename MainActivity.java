@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-        myWebView.loadUrl("https://akusaha.autotesis.com");
+        myWebView.loadUrl("https://repo.akusaha.ndx.tgp");
         fab.setVisibility(View.GONE);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,25 +53,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    /**private void printWebView() {
-        WebView webView = new WebView(this);
-        webView.setWebViewClient(new WebViewClient() {
-            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                return false;
-            }
-            @Override
-            public void onPageFinished(WebView view, String url) {
-                createWebPrintJob(view);
-                myWebView = null;
-            }
-        });
-        String htmlDocument =
-                "<html><body><h1>Android Print Test</h1><p>"
-                        + "This is some sample content.</p></body></html>";
-        webView.loadDataWithBaseURL(null, htmlDocument,
-                "text/HTML", "UTF-8", null);
-        myWebView = webView;
-    }**/
+   
     private void createWebPrintJob(WebView webView) {
 
         PrintManager printManager = (PrintManager) this
